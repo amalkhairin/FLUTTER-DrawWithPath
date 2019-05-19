@@ -24,22 +24,6 @@ class LogoPainter extends CustomPainter{
 
     canvas.drawPath(path, paint);
 
-    //third shape path
-    Paint thPaint = Paint();
-    thPaint.color = Colors.orange[400];
-    thPaint.style = PaintingStyle.fill;
-
-    Path thPath = Path();
-
-    thPath.moveTo(((size.width+30)+70), ((size.height+260)+60));        //Start path 0.0
-    thPath.lineTo(((size.width+60)+60)+50, ((size.height+300)+60)+30);       //second path left
-    thPath.lineTo(((size.width+250)), ((size.height+130)+120)+140);      //third path right
-    thPath.lineTo(((size.width+170)-30), ((size.height+130)+100)+50);       //fourth path right (up)
-
-    thPath.close();
-
-    canvas.drawPath(thPath, thPaint);
-
     //shadow shape path
     Paint shadow = Paint();
     shadow.color = Colors.black.withOpacity(0.4);
@@ -71,6 +55,22 @@ class LogoPainter extends CustomPainter{
     secPath.close();
 
     canvas.drawPath(secPath, secPaint);
+
+    //third shape path
+    Paint thPaint = Paint();
+    thPaint.color = Colors.orange[600].withOpacity(0.5);
+    thPaint.style = PaintingStyle.fill;
+
+    Path thPath = Path();
+
+    thPath.moveTo(((size.width+30)+70), ((size.height+260)+60));        //Start path 0.0
+    thPath.lineTo(((size.width+60)+60)+50, ((size.height+300)+60)+30);       //second path left
+    thPath.lineTo(((size.width+250)), ((size.height+130)+120)+140);      //third path right
+    thPath.lineTo(((size.width+170)-30), ((size.height+130)+100)+50);       //fourth path right (up)
+
+    thPath.close();
+
+    canvas.drawPath(thPath, thPaint);
 
   }
 
